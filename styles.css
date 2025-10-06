@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  background: radial-gradient(50% 50% at 50% 50%, #D93B6A 0%, #000 100%);
+  text-align: center;
+  width: 100%;
+  padding: 100px 20px 30px;
+}
+
+.name-logo {
+  width: 350px;
+  max-width: 80%;
+}
+
+.subtitle {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.column {
+  flex: 1 1 200px;
+  min-width: 200px;
+  text-align: left;
+ 
+}
+
+.column h2 {
+  color: #D93B6A;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #D93B6A;
+  padding-bottom: 5px;
+}
+
+.column ul {
+  list-style-image: url(images/star.png);
+  padding-left: 25px;
+  margin: 0; 
+ 
+}
+
+.column li {
+  margin-bottom: 10px;
+
+}
+
+
+footer {
+  background: radial-gradient(50% 50% at 50% 50%, #D93B6A 0%, #000 100%);
+  text-align: center;
+  width: 100%;
+  padding: 50px 20px 30px;
+  margin-top: auto;
+}
+
+footer p {
+  color: white;
+  font-size: 0.9rem;
+}
+.floating-star {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  filter: drop-shadow(0 0 6px #d93b6a);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+
+.star1 { top: 20%; left: 10%; animation-delay: 0s; }
+.star2 { top: 40%; left: 80%; animation-delay: 1s; }
+.star3 { top: 30%; left: 30%; animation-delay: 1.5s; }
+.star4 { top: 10%; left: 60%; animation-delay: 1s; }
+.star5 { top: 40%; left: 20%; animation-delay: 0s; }
+.star6 { top: 10%; left: 85%; animation-delay: 0s; }
+.star7 { top: 30%; left: 70%; animation-delay: 1.5s; }
+
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.6;
+  }
+}
+
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .column {
+    width: 90%;
+    text-align: center;
+  }
+
+.column ul {
+  list-style-image: url('images/star.png');
+  padding-left: 25px;
+  margin: 0;
+}
+
+  .column h2 {
+    text-align: center;
+  }
+}
