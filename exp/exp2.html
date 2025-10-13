@@ -7,6 +7,35 @@
 </head>
 <body>
     <h1>Experiment 2</h1>
+    <div>Guess what color I'm wearing!</div>
+    <script>
+        function computerColor(){
+            var myColors = ['red', 'yellow', 'green', 'blue', 'purple', 'pink', 'white'];
+            var pickedColor = myColors[randomInt(0,6)];
+            console.log(pickedColor);
+            return pickedColor;
+        }
+
+        function randomInt (min, max){
+            return Math.floor( (max-min +1)*Math.random())+ min;
+        }
+        function checkColor(){
+            var userColor = prompt("What color shirt am I wearing? Your options are red, yellow, green, blue, purple, pink, and white!", "");
+            var theDiv = document.querySelector('div');
+
+            if (userColor == computerColor()){
+                theDiv.innerHTML = "<p>Yay! You guessed correct! </p>";
+    
+                theDiv.className = "white"
+            } else{
+                  theDiv.innerHTML = "<p>Naur! You guessed wrong!</p>";
+                theDiv.className = "pink"
+            }
+            }
+
+checkColor();
+        
+    </script>
     
 </body>
 </html>
