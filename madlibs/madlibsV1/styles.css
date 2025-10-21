@@ -3,7 +3,7 @@ body {
   background-size: 90%;
   background-position: center top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: relative;
   background-color: #c7a77e;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: #ccc;
