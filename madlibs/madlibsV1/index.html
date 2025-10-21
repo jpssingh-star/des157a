@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moo Moo's Cafe</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Moo Moo's Cafe</h1>
+  <img src="images/arm.png" alt="arm" class="arm">
+
+  <main>
+   
+    <section id="madlib-questions">
+      <h2>Menu</h2>
+      <form>
+        <label for="adjective1">Adjective:</label>
+        <input type="text" id="adjective1" required>
+
+        <label for="noun1">Noun:</label>
+        <input type="text" id="noun1" required>
+
+        <label for="verb1">Verb:</label>
+        <input type="text" id="verb1" required>
+
+        <label for="drink">Type of Drink:</label>
+        <input type="text" id="drink" required>
+
+        <label for="flavor">Flavor:</label>
+        <input type="text" id="flavor" required>
+
+        <button type="submit">Place an Order!</button>
+      </form>
+    </section>
+
+    
+    <section id="madlib-container">
+      <h2>Receipt</h2>
+      <p id="madlibs-output">
+        This morning I went to Moo Moo's Cafe, the most <span>adj</span> place in town. 
+        A <span>adj</span> cow wearing a <span>noun</span> was by the counter and <span>verb</span>-ed me. 
+        “What can I make for you today?” she asked. 
+        I decided to order a <span>adj</span> <span>drink</span> with <span>flavor</span>. 
+        “Make it extra <span>adj</span> please!” The moo-rista began to <span>verb</span> behind the counter. 
+        She made my drink very <span>adj</span> and <span>adj</span> and put it in a <span>noun</span>. 
+        I got my drink and it was <span>adj</span> and full of <span>noun</span>. 
+        I <span>verb</span>-ed and left.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

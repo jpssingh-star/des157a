@@ -1,0 +1,136 @@
+body {
+  background-image: url('images/newbackground.jpg');
+  background-size: 90%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #c7a77e;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.8em;
+  color: #4B2E05;
+  text-shadow: 2px 2px #f0d7a7;
+}
+
+.arm {
+  position: absolute;
+  left: 200px;
+  top: 130px;
+  width: 1000px;
+  transform-origin: top right;
+  animation: wave 2s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(2deg);}
+}
+
+
+main {
+  display: flex;
+  justify-content: flex-end; 
+  width: 100%;
+  margin:  150px 10px 0 0; 
+  box-sizing: border-box;
+}
+
+section {
+  flex: 0 0 auto; 
+  padding: 20px;
+}
+
+
+#madlib-questions {
+    display: block;  
+}
+
+#madlib-container {
+    display: none;   /* switch this stuff */
+}
+
+
+
+#madlib-questions, #madlib-container {
+  position: absolute;
+    top: 130px;
+  right: 90px;       
+  width: 300px;      
+  background: rgba(245, 240, 230, 0.75);
+  border: 3px solid #4B2E05;
+  border-radius: 15px;
+  padding: 20px 30px;
+  width: 300px;                   
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  font-family: 'Montserrat', sans-serif;
+  color: #4B2E05;
+  margin-left: 20px;             
+}
+
+#madlib-questions h2, #madlib-container h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #4B2E05;
+}
+
+
+#madlib-questions label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: #4B2E05;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
+}
+
+#madlib-questions input {
+  width: 100%;
+  padding: 6px 8px;
+  margin-bottom: 10px;
+  border: 2px solid #4B2E05;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
+  background-color: #fffdf8;
+}
+
+#madlib-questions button {
+  margin-top: 8px;
+  background-color: #4B2E05;
+  color: #fff5e1;
+  font-family: 'Pacifico', cursive;
+  border: none;
+  padding: 8px 20px;
+  font-size: 1.1em;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#madlib-questions button:hover {
+  background-color: #7c5010;
+  transform: scale(1.05);
+}
+
+
+#madlibs-output {
+  font-size: 0.95em;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+span {
+  font-weight: bold;
+}
