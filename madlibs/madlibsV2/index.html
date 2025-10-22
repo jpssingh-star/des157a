@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moo Moo's Cafe</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Moo Moo's Cafe</h1>
+  <img src="images/arm.png" alt="arm" class="arm">
+
+  <main>
+    <div class="content-container">
+      <section id="madlib-questions">
+        <h2>Menu</h2>
+        <form id="myform">
+          <label for="adjective1">Adjective:</label>
+          <input type="text" id="adjective1" required>
+
+          <label for="adjective2">Adjective:</label>
+          <input type="text" id="adjective2" required>
+
+          <label for="noun1">Noun:</label>
+          <input type="text" id="noun1" required>
+
+          <label for="verb1">Verb:</label>
+          <input type="text" id="verb1" required>
+
+         
+
+          <label for="drink">Type of Drink:</label>
+          <input type="text" id="drink" required>
+
+          <label for="flavor">Flavor:</label>
+          <input type="text" id="flavor" required>
+
+          <label for="adjective4">Adjective:</label>
+          <input type="text" id="adjective4" required>
+
+          <label for="verb2">Verb:</label>
+          <input type="text" id="verb2" required>
+
+      
+          <label for="adjective6">Adjective:</label>
+          <input type="text" id="adjective6" required>
+
+          <label for="noun2">Noun:</label>
+          <input type="text" id="noun2" required>
+
+      
+
+          <label for="noun3">Noun:</label>
+          <input type="text" id="noun3" required>
+
+          <label for="verb3">Verb:</label>
+          <input type="text" id="verb3" required>
+
+          <button type="submit" class="submit-btn">Place an Order!</button>
+        </form>
+      </section>
+
+      <section id="madlib-container">
+        <h2>Receipt</h2>
+        <p id="madlibs-output">
+          This morning I went to Moo Moo's Cafe, the most <span id="adjective1-span"></span> place in town. 
+          A <span id="adjective2-span"></span> cow wearing a <span id="noun1-span"></span> was by the counter and <span id="verb1-span"></span>-ed me. 
+          “What can I make for you today?” she asked. 
+          I decided to order a <span id="drink-span"></span> with <span id="flavor-span"></span>. 
+          “Make it extra <span id="adjective4-span"></span> please!” The moo-rista began to <span id="verb2-span"></span> behind the counter. 
+          She made my drink very <span id="adjective6-span"></span> and put it in a <span id="noun2-span"></span>. 
+          I got my drink and it was full of <span id="noun3-span"></span>. 
+          I <span id="verb3-span"></span>-ed and left.
+        </p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

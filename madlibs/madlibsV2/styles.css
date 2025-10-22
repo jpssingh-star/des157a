@@ -1,0 +1,202 @@
+body {
+  background-image: url('images/idea.jpg');
+  background-size: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #c7a77e;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+  color: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+ 
+  font-family: "Moo Lah Lah", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+  font-size: 70px;
+  color: #4B2E05;
+  text-shadow: 2px 2px #f0d7a7;
+}
+h1:hover {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+ 
+  font-family: "Moo Lah Lah", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+  font-size: 70px;
+  color: #083519;
+  text-shadow: 2px 2px #f0d7a7;
+}
+.arm {
+  position: fixed;
+  left: 270px;
+  top: 190px;
+  width: 1000px;
+  transform-origin: top right;
+  animation: wave 2s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(2.5deg);}
+}
+
+
+main {
+  display: flex;
+  justify-content: flex-end; 
+  width: 100%;
+  margin: 150px 10px 0 0; 
+  box-sizing: border-box;
+}
+
+section {
+  flex: 0 0 auto; 
+  padding: 20px;
+}
+
+
+#madlib-questions {
+  display: block;  
+}
+
+#madlib-questions form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px; 
+  row-gap: 10px; 
+  text-align: left;
+}
+
+#madlib-questions button {
+  grid-column: span 2;
+  justify-self: center;
+}
+
+#madlib-container {
+  display: none;   /* switch this  */
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+
+#madlib-questions, #madlib-container {
+  position: absolute;
+  top: 15px;
+  right: 40px;       
+  width: 300px;      
+  background: rgba(245, 240, 230, 0.75);
+  border: 3px solid #4B2E05;
+  border-radius: 15px;
+  padding: 20px 30px;
+  width: 300px;                   
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+ 
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+  color: #4B2E05;
+  margin-left: 20px;             
+}
+
+#madlib-questions h2, #madlib-container h2 {
+  
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+
+
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #4B2E05;
+}
+
+
+/* ----- Form Labels ----- */
+#madlib-questions label {
+  display: block;
+  margin-bottom: 4px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* bold */
+  font-style: normal;
+  font-size: 1.1em; /* bigger for readability */
+  color: #4B2E05;
+}
+
+/* ----- Input Text ----- */
+#madlib-questions input {
+  width: 100%;
+  padding: 6px 8px;
+  margin-bottom: 10px;
+  border: 2px solid #4B2E05;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; /* bold so typed text stands out */
+  font-style: normal;
+  font-size: 1em;
+  background-color: #fffdf8;
+}
+
+
+
+
+#madlib-questions button {
+  margin-top: 8px;
+  background-color: #4B2E05;
+  color: #fff5e1;
+ 
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+  border: none;
+  padding: 8px 20px;
+  font-size: 1.1em;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#madlib-questions button:hover {
+  background-color: #083519;
+  transform: scale(1.05);
+}
+
+#madlibs-output {
+  font-weight: 400;   /* normal for non-user words */
+  font-size: 1.05em;
+  color: #4B2E05;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+#madlibs-output span {
+  font-weight: 700;   /* bold only user input */
+  color: #4B2E05;
+}
