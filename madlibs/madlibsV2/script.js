@@ -6,10 +6,9 @@
     const madlibContainer = document.querySelector('#madlib-container');
     const madlibQuestions = document.querySelector('#madlib-questions');
 
-    // grab all text inputs
+    
     const formData = document.querySelectorAll('#myform input[type=text]');
 
-    // map each input to its corresponding span id
     const spanIds = [
         'adjective1-span',
         'adjective2-span',
@@ -31,7 +30,7 @@
         let words = [];
         let allFilled = true;
 
-        // collect all input values and check for empty
+       
         formData.forEach(input => {
             if (input.value.trim() === '') {
                 allFilled = false;
@@ -44,12 +43,12 @@
             return;
         }
 
-        // fill each span with corresponding input
+       
        spanIds.forEach((id, index) => {
     document.querySelector(`#${id}`).innerHTML = words[index];
 });
 
-        // hide the form, show the receipt
+        // hide form, show receipt
         madlibQuestions.style.display = 'none';
         madlibContainer.style.display = 'block';
     });

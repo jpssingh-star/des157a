@@ -137,18 +137,17 @@ section {
 }
 
 
-/* ----- Form Labels ----- */
 #madlib-questions label {
   display: block;
   margin-bottom: 4px;
   font-family: "Poppins", sans-serif;
-  font-weight: 700; /* bold */
+  font-weight: 700; 
   font-style: normal;
-  font-size: 1.1em; /* bigger for readability */
+  font-size: 1.1em; 
   color: #4B2E05;
 }
 
-/* ----- Input Text ----- */
+
 #madlib-questions input {
   width: 100%;
   padding: 6px 8px;
@@ -156,7 +155,7 @@ section {
   border: 2px solid #4B2E05;
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
-  font-weight: 600; /* bold so typed text stands out */
+  font-weight: 600; 
   font-style: normal;
   font-size: 1em;
   background-color: #fffdf8;
@@ -189,7 +188,7 @@ section {
 }
 
 #madlibs-output {
-  font-weight: 400;   /* normal for non-user words */
+  font-weight: 400;   
   font-size: 1.05em;
   color: #4B2E05;
   line-height: 1.4;
@@ -197,6 +196,6 @@ section {
 }
 
 #madlibs-output span {
-  font-weight: 700;   /* bold only user input */
+  font-weight: 700;  
   color: #4B2E05;
 }
