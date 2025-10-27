@@ -38,7 +38,7 @@
             words.push(input.value.trim());
         });
 
-      
+    
 
        
        spanIds.forEach((id, index) => {
