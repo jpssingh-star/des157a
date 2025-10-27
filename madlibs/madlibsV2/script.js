@@ -38,10 +38,7 @@
             words.push(input.value.trim());
         });
 
-        if (!allFilled) {
-            alert("Please complete all fields so we can make your Mad Lib!");
-            return;
-        }
+      
 
        
        spanIds.forEach((id, index) => {
