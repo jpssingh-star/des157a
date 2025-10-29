@@ -86,19 +86,13 @@
             madlibOverlay.style.display = 'block';
 
             // clear error messages that i added 
-            if (errorMessage) {
-                errorMessage.innerHTML = '';
-            }
-
-            return; 
+           
+                errorMessage.innerHTML = ''; //gets rid of old errors 
+            
+            return; //this is so the function ends
         }
-
-       
-        if (errorMessage) {
-            errorMessage.innerHTML = myText;
-        } else {
-            alert(myText);
-        }
+        
+         
     });
 
 
