@@ -1,24 +1,36 @@
 body {
   margin: 0;
   background-color: #959292;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   scroll-behavior: smooth;
+  line-height: 25px;
 }
 
 h1 {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   letter-spacing: 3px;
-  color: #08415C;
+  color: #ffffff;
   margin: 10px ;
-  padding-top: 20px;
+  padding-top: 50px;
+ 
+  font-family: "Metal Mania", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+
 }
 header h2{
   text-align: center;
   font-size: 1rem;
-  color: #08415C;
+  color: #cfcfcf;
   margin: 10px ;
-  padding-top: 20px;
+  padding-top: 50px;
+    font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .plant-section {
@@ -76,6 +88,14 @@ header h2{
   color: #ffffff;
 }
 
+.plant-text h2 {
+   letter-spacing: 3px;
+ font-family: "Metal Mania", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
 /* CLICK interaction using checkbox so it registers the image as something to click, although i can do this in js too like cat example */
 .plant-toggle:checked + .plant-label .plant-img {
   filter: grayscale(0%) saturate(120%);
@@ -96,8 +116,8 @@ header h2{
 }
 
  
-.one { background-color: #A77464; transition: all 3s; }
-        .two { background-color: #08415C; transition: all 3s; }
+.one { background-color: #3b2615; transition: all 3s; }
+        .two { background-color: #324b65; transition: all 3s; }
         .three { background-color: #678D58; transition: all 3s; }
         .four { background-color: #A6C48A; transition: all 3s; }
-        .five { background-color: #AFCBFF; transition: all 3s; }
+        .five { background-color: #c9a516; transition: all 3s; }
