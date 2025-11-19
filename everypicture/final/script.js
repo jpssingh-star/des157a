@@ -18,4 +18,8 @@ window.addEventListener('load', function () {
             default: bodyTag.className = "six";
         }
     });
+
+
+   
+
 }); 
