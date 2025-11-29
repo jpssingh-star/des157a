@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dance Battle!</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+<section id="intro-overlay" class="hidden">
+    <article>
+        <h2>Dance Battle!</h2>
+        <p>It’s <strong>Snoopy</strong> vs <strong>Courage</strong> on the dance floor! </p>
+
+        <h3>How to Play:</h3>
+        <ul>
+             <li>Find a friend and fight over which character you want!</li>
+            <li>Press <strong>START</strong> to see who opens the dance-off.</li>
+            <li>When it’s your character’s turn, click the <strong> Character's turn button</strong> to perform a dance move</li>
+            <li>Watch the moves and see how your opponent reacts:
+                <ul>
+                    <li>No reaction = full hype</li>
+                    <li>Small reaction = half hype</li>
+                    <li>Block completely = no hype </li>
+                </ul>
+            </li>
+            <li>Keep dancing until one character reaches <strong>100% hype</strong> and wins!</li>
+            
+        </ul>
+
+        <h3>Tips:</h3>
+        <ul>
+            <li>Each attack is <strong>random</strong>, no two battles are the same</li>
+            <li>Keep an eye on the hype bars, they show who’s dominating the dance floor</li>
+            <li>Have fun and watch their groovy moves!</li>
+        </ul>
+
+        <button class="close">Got it!</button>
+    </article>
+</section>
+
+
+
+
+    <div id="game-wrapper">
+</div>
+
+    <h1>Dance Battle!</h1>
+    <section id="game">
+        <div class="player">
+                <div class="spotlight" id="Snoopy-spotlight"></div>
+       <div id="confetti-Snoopy" class="hidden">
+    <img src="images/confetti.gif" alt="Snoopy Wins Confetti">
+</div>    
+ <div class="gifLayer" id="Snoopy-gif"></div>
+            <img src="images/Snoopy.gif" alt="Snoopy" width="400" height="400" id="Snoopy">
+            
+            <h2>Snoopy's Hype</h2>
+
+            <div class="meter">
+                <div id="healthbar0"><div></div></div>
+                <p id="monsterhealth0">0%</p>
+            </div>
+        </div>
+
+        <div class="player">
+            <div class="spotlight" id="Courage-spotlight"></div>
+            <div id="confetti-Courage" class="hidden">
+    <img src="images/confetti.gif" alt="Courage Wins Confetti">
+</div>
+<div class="gifLayer" id="Courage-gif"></div>
+            <img src="images/Courage.gif" alt="Courage" width="400" height="400" id="Courage">
+            <h2>Courage's Hype</h2>
+
+            <div class="meter">
+                <div id="healthbar1"><div>
+
+                </div></div>
+                <p id="monsterhealth1">0%</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="action">
+        <div id="messages">
+            <p>Press start to pick who opens the dance-off!</p>
+            <button id="start">START</button>
+        </div>
+
+      <button id="attack0" class="hidden">Snoopy's turn</button>
+      <button id="attack1" class="hidden">Courage's turn</button>
+
+    </section>
+  
+
+
+
+</body>
+
+</html>
