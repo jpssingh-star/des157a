@@ -2,15 +2,15 @@
     'use strict';
     console.log('reading js');
 
-    // ★ SOUND ADDED — load audio files
+   
     const clickSound = new Audio('sound/button-4-soundjay.mp3');
     const winSound = new Audio('sound/you-win-sequence-pixabay.mp3');
-
+//intro message // overlay madlibs 
     var introOverlay = document.getElementById('intro-overlay');
     var skipIntroBtn = introOverlay.querySelector('.close');
 
     introOverlay.className = 'showing';
-
+//goes away on its own or click button
     var introTimeout = setTimeout(function() {
         introOverlay.className = 'hidden';
     }, 25000);
@@ -63,7 +63,7 @@
         ],
         index: 0
     };
-
+//the spotlight on charcter turn
     function showSpotlight(playerName) {
         var spotlightId = playerName + '-spotlight';
         var spotlight = document.getElementById(spotlightId);
@@ -71,7 +71,7 @@
             spotlight.style.opacity = '1';
         }
     }
-
+//go away
     function hideSpotlight(playerName) {
         var spotlightId = playerName + '-spotlight';
         var spotlight = document.getElementById(spotlightId);
@@ -82,7 +82,7 @@
 
     startBtn.addEventListener('click', function() {
 
-        // ★ SOUND ADDED — start button click sound
+        // button sound zap start button
         clickSound.play();
 
         gameData.index = Math.round(Math.random());
@@ -106,7 +106,7 @@
 
     function monsterAttack(playerIndex) {
 
-        // ★ SOUND ADDED — attack button click sound
+        // button sound zap for dance
         clickSound.play();
 
         if (playerIndex === 0) {
@@ -121,7 +121,7 @@
 
         var thisAttack = Math.floor(Math.random() * 5);
         var thisDefense = Math.floor(Math.random() * 3);
-
+//hide png
         attackBtn.className = 'hidden';
         attackBtn1.className = 'hidden';
 
@@ -129,7 +129,7 @@
         messages.innerHTML = '<p><strong>' + attacker + '</strong> performs ' + gameData.attackMessage[thisAttack] + '</p>';
 
         showSpotlight(attacker);
-
+//spotlight and gif
         var gifBox = document.getElementById(attacker + '-gif');
         var gifToShow = attacker === 'Snoopy' ? snoopyGifs[thisAttack] : courageGifs[thisAttack];
         document.getElementById(attacker).classList.add('hiddenImage');
@@ -148,7 +148,7 @@
             var hype = Math.min(100, Math.floor(gameData.hype[playerIndex]));
             document.querySelector('#healthbar' + playerIndex + ' div').style.width = hype + '%';
             document.querySelector('#monsterhealth' + playerIndex).innerHTML = hype + '%';
-
+//get rid of image
             gifBox.innerHTML = '';
             document.getElementById(attacker).classList.remove('hiddenImage');
             hideSpotlight(attacker);
@@ -156,7 +156,7 @@
             checkWinningCondition(playerIndex, attacker);
         }, 2500);
     }
-
+//winner
     function checkWinningCondition(playerIndex, attackerName) {
         setTimeout(function() {
             monster1.removeAttribute('class');
@@ -168,7 +168,7 @@
 
                 messages.innerHTML = '<p><strong>' + attackerName + '</strong> reached MAX HYPE and wins the dance-off!</p>';
 
-                // ★ SOUND ADDED — winner sound
+                // winner stuff confetti and music
                 winSound.play();
 
                 if (attackerName === "Snoopy") {
