@@ -19,7 +19,7 @@
         introOverlay.className = 'hidden';
         clearTimeout(introTimeout);
     });
-
+//characters and buttons
     var monster1 = document.getElementById('Snoopy');
     var monster2 = document.getElementById('Courage');
     var messages = document.getElementById('messages');
@@ -28,7 +28,7 @@
     var attackBtn1 = document.getElementById('attack1');
 
     var attacker, defender, defenderIndex;
-
+//all my gifs for different moves for each character
     var snoopyGifs = [
         'images/snoop1.gif',
         'images/snoop2.gif',
@@ -44,7 +44,7 @@
         'images/courage4.gif',
         'images/courage5.gif'
     ];
-
+//the moves and how much points they are (from monster battle example)
     var gameData = {
         monsters: ['Snoopy', 'Courage'],
         hype: [0, 0],
@@ -82,7 +82,7 @@
 
     startBtn.addEventListener('click', function() {
 
-        // button sound zap start button
+        // button sound zap start button, choose random who first
         clickSound.play();
 
         gameData.index = Math.round(Math.random());
@@ -96,7 +96,7 @@
             attackBtn.className = 'hidden';
             attackBtn1.className = 'showing';
         }
-
+//hype dance bar
         gameData.hype = [0, 0];
         document.querySelector('#healthbar0 div').style.width = '0%';
         document.querySelector('#healthbar1 div').style.width = '0%';
@@ -118,7 +118,7 @@
             defender = gameData.monsters[0];
             defenderIndex = 0;
         }
-
+//choosing what attack
         var thisAttack = Math.floor(Math.random() * 5);
         var thisDefense = Math.floor(Math.random() * 3);
 //hide png
@@ -134,7 +134,7 @@
         var gifToShow = attacker === 'Snoopy' ? snoopyGifs[thisAttack] : courageGifs[thisAttack];
         document.getElementById(attacker).classList.add('hiddenImage');
         gifBox.innerHTML = '<img src="' + gifToShow + '">';
-
+//blocks the dance move 
         setTimeout(function() {
             messages.innerHTML = '<p><strong>' + defender + '</strong> ' + gameData.defendMessage[thisDefense] + '</p>';
             document.getElementById(defender).className = 'defend' + thisDefense;
@@ -165,7 +165,7 @@
             var hype = Math.floor(gameData.hype[playerIndex]);
 
             if (hype >= 100) {
-
+//winner message 
                 messages.innerHTML = '<p><strong>' + attackerName + '</strong> reached MAX HYPE and wins the dance-off!</p>';
 
                 // winner stuff confetti and music
@@ -183,7 +183,7 @@
                 document.getElementById('reset').addEventListener('click', function() {
                     location.reload();
                 });
-
+//keep performing until max hype winner
             } else {
                 gameData.index = gameData.index ? 0 : 1;
                 messages.innerHTML = '<p>It\'s now <strong>' + gameData.monsters[gameData.index] + '\'s</strong> turn to perform!</p>';
@@ -198,7 +198,7 @@
             }
         }, 3000);
     }
-
+//dance moves
     attackBtn.addEventListener('click', function() {
         monsterAttack(0);
     });
