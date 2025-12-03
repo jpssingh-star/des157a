@@ -2,7 +2,7 @@
     'use strict';
     console.log('reading js');
 
-   
+   // added my sounds here
     const clickSound = new Audio('sound/button-4-soundjay.mp3');
     const winSound = new Audio('sound/you-win-sequence-pixabay.mp3');
 //intro message // overlay madlibs 
