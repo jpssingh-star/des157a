@@ -1,0 +1,256 @@
+
+body, h2, p {
+    font-family: "Roboto Mono", monospace;
+}
+
+h1 {
+    font-family: "Jersey 20", sans-serif;
+    font-size: 70px; 
+     letter-spacing: 5px; 
+    text-align: center;
+    margin: 0 0 10px;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+
+button {
+    font-family: "Jersey 20", sans-serif;
+    font-size: 1.5rem; 
+    font-weight: 700;
+    padding: 12px 24px; 
+    width: 200px; 
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+body {
+    color: #fff;
+    background: url('images/bckg.gif') no-repeat center center;
+   background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    overflow-y: scroll;
+
+
+}
+
+#game {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.player {
+    text-align: center;
+    width: 45%;
+    position: relative;
+}
+
+img {
+    display: block;
+    margin: 0 auto 12px;
+    transition: transform 400ms ease, filter 400ms ease;
+}
+
+.meter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+#healthbar0, #healthbar1 {
+    width: 70%;
+    height: 28px;
+    border-radius: 20px;
+    background: #222;
+    position: relative;
+    overflow: hidden;
+}
+
+#healthbar0 div, #healthbar1 div {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #1bff8d 0%, #c0ffc4 50%, #fefbff 100%);
+    transition: width 800ms cubic-bezier(.2,.9,.3,1);
+}
+
+#action {
+    max-width: 1000px;
+    text-align: center;
+    padding: 28px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+button {
+    background: #1bff8d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background: hsl(150, 100%, 38%);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.attack0 { animation: tinyWiggle 900ms ease-in-out 1; }
+.attack1 { animation: happyBounce 900ms cubic-bezier(.2,.9,.3,1) 1; }
+.attack2 { animation: spinStep 1100ms cubic-bezier(.2,.9,.3,1) 1; }
+.attack3 { animation: panicTwist 1100ms cubic-bezier(.2,.9,.3,1) 1; }
+.attack4 { animation: flyingAceFlip 1200ms cubic-bezier(.2,.9,.3,1) 1; }
+
+.defend0 { animation: stunnedTilt 900ms ease-in-out 1; }
+.defend1 { animation: impressedHop 900ms ease-in-out 1; }
+.defend2 { animation: cheerPop 1000ms ease-in-out 1; }
+
+/*hide snoopycourage during dance */
+.hiddenImage {
+    visibility: hidden;
+}
+
+
+.gifLayer {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gifLayer img {
+    width: 100%;
+    height: auto;
+}
+
+#intro-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(131, 154, 212, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 1000;
+}
+
+#intro-overlay article {
+    background-color: #000;
+    padding: 20px;
+    width: 50vw;
+    max-width: 600px;
+    text-align: left; 
+    border-radius: 10px;
+    position: relative;
+}
+
+
+#intro-overlay h2 {
+    font-family: "Jersey 20", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#intro-overlay p {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#intro-overlay .close {
+    font-family: "Jersey 20", sans-serif;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#intro-overlay ul {
+    margin-left: 20px; 
+}
+#intro-overlay .close {
+    display: block;       
+    margin: 20px auto 0;  
+    font-family: "Jersey 20", sans-serif;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#intro-overlay article strong {
+    color: #1bff8d; 
+}
+.spotlight {
+    position: absolute;
+    top: 30%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    background: url('images/spotlight.png') no-repeat center center;
+    background-size: cover;
+    pointer-events: none;
+    opacity: 0; 
+    transition: opacity 0.5s ease, top 0.5s ease;
+    z-index: 5;
+}
+
+#confetti-Snoopy, #confetti-Courage {
+    position: absolute; 
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+    z-index: 10; 
+}
+
+
+
+#confetti-Snoopy img, #confetti-Courage img {
+    width: 100%;
+    height: auto;
+}
+
+
+.links{
+    color: azure;
+    
+}
