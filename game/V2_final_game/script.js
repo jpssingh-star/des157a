@@ -89,14 +89,14 @@
 
         messages.innerHTML = '<p>Get ready! <strong>' + gameData.monsters[gameData.index] + '</strong> opens the dance-off!</p>';
 
-        if (gameData.index === 0) {
+        if (gameData.index === 0) { // snoopy 
             attackBtn.className = 'showing';
             attackBtn1.className = 'hidden';
         } else {
-            attackBtn.className = 'hidden';
+            attackBtn.className = 'hidden'; //courage
             attackBtn1.className = 'showing';
         }
-//hype dance bar
+//hype dance bar // Reset hype bars
         gameData.hype = [0, 0];
         document.querySelector('#healthbar0 div').style.width = '0%';
         document.querySelector('#healthbar1 div').style.width = '0%';
@@ -104,6 +104,7 @@
         document.querySelector('#monsterhealth1').innerHTML = '0%';
     });
 
+    // Main attack function
     function monsterAttack(playerIndex) {
 
         // button sound zap for dance
@@ -178,7 +179,7 @@
                     document.getElementById("confetti-Courage").classList.remove("hidden");
                     document.getElementById("confetti-Courage").classList.add("showing");
                 }
-
+ // Add reset button
                 messages.innerHTML += '<button id="reset">Dance Again</button>';
                 document.getElementById('reset').addEventListener('click', function() {
                     location.reload();

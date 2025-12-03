@@ -151,7 +151,7 @@
         }, 2500);
     }
 
-    // Winning condition
+
    function checkWinningCondition(playerIndex, attackerName) {
     setTimeout(function() {
         monster1.removeAttribute('class');
